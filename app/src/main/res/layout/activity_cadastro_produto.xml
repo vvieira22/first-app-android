@@ -1,59 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CadastroProdutoActivity">
 
+    android:fillViewport="true">
+    <!--    #pegar a tela toda.-->
 
-    <TextView
-        android:id="@+id/textView"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
-
-    <EditText
-        android:id="@+id/nomeProduto"
-        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:hint="Nome:"
-        android:maxLength="10"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:context=".CadastroProdutoActivity">
 
-    <EditText
-        android:id="@+id/descricaoProduto"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Descrição:"
-        android:maxLength="10"
-        app:layout_constraintEnd_toEndOf="@+id/nomeProduto"
-        app:layout_constraintStart_toStartOf="@+id/nomeProduto"
-        app:layout_constraintTop_toBottomOf="@+id/nomeProduto" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
 
-    <EditText
-        android:id="@+id/precoCadastro"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Preço:"
-        app:layout_constraintEnd_toEndOf="@+id/descricaoProduto"
-        app:layout_constraintStart_toStartOf="@+id/descricaoProduto"
-        app:layout_constraintTop_toBottomOf="@+id/descricaoProduto" />
+        <EditText
+            android:id="@+id/nomeProduto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:hint="Nome:"
+            android:inputType="text"
+            android:maxLength="10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="30dp"
-        android:text="Cadastrar"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <EditText
+            android:id="@+id/precoCadastrado"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="Preço:"
+            android:maxLength="10"
+            app:layout_constraintEnd_toEndOf="@+id/nomeProduto"
+            app:layout_constraintStart_toStartOf="@+id/nomeProduto"
+            app:layout_constraintTop_toBottomOf="@+id/nomeProduto" />
+
+        <EditText
+            android:id="@+id/descricaoProduto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Descrição:"
+            app:layout_constraintEnd_toEndOf="@+id/precoCadastrado"
+            app:layout_constraintStart_toStartOf="@+id/precoCadastrado"
+            app:layout_constraintTop_toBottomOf="@+id/precoCadastrado" />
+
+        <Button
+            android:id="@+id/botaoCadastrar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:text="Cadastrar"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/descricaoProduto"
+            app:layout_constraintVertical_bias="1"/>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
